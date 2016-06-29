@@ -1,0 +1,14 @@
+/* to test Base addCSS and removeCSS */
+html {
+	font-family: 'Roboto', sans-serif;
+}
+
+main {
+	padding: 8px;
+}
+
+#__blaze-root {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}

@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.km-tabs {
+	display: flex;
+	height: 48px;
+	position: relative;
+	font-size: 14px;
+	font-weight: 500;
+  
+  width: 100%;
+  white-space: nowrap;
+  
+  background-color: #00bcd4;
+  color: #fff;
+  clear: both;
+}
+
+.km-tabs--align-center {
+	margin: 0 auto;
+}
+
+.km-tabs--align-left {
+	float: left;
+}
+
+.km-tabs--align-right {
+	float: right;
+}
+
+.km-tabs--raised {
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.km-tabs__indicator {
+	position: absolute;
+	height: 2px;
+	background-color: red;
+	will-change: left, right;
+}
+
+.km-tabs__indicator--top {
+	top: 0;
+}
+
+.km-tabs__indicator--bottom {
+	bottom: 0;
+}

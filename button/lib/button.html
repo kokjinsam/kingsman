@@ -1,0 +1,6 @@
+<template name="kingsman_button">
+	<button class="km-button {{_type}} {{#if _classList}} {{#each _classList}} {{this}} {{/each}} {{/if}} {{_waves}} " {{_disabled}}>
+		{{#if _mdi}}<i class="material-icons">{{_mdi}}</i>{{/if}} 
+		{{> Template.contentBlock}}
+	</button>
+</template>

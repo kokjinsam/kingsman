@@ -1,0 +1,83 @@
+<head>
+	<title>Button Component</title>
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<h3>Raised Button</h3>
+	<div class="column">
+	  {{# KM.Button}}
+			Raised
+	  {{/ KM.Button}}
+	  
+	  {{> KM.Button args mdi='add'}}
+	  
+	  {{> KM.Button args mdi='add' classList=classArr}}
+	  
+	  {{# KM.Button args mdi='add'}}
+			Raised
+	  {{/ KM.Button}}
+	</div>
+	
+	<div class="column">
+		{{> KM.Button args mdi='add' disabled=true classList=classArr}}
+			  
+	  {{# KM.Button args mdi='add' disabled=true}}
+			Disabled Raised
+	  {{/ KM.Button}}
+	</div>
+	
+	<div class="column">
+		{{> KM.Button args mdi='add' togglable=true classList=classArr}}
+		
+	  {{# KM.Button args togglable=true}}
+			Togglable Raised
+	  {{/ KM.Button}}
+	</div>
+  
+  <h3>Flat Button</h3>
+  <div class="column">
+	  {{# KM.Button args type='flat'}}
+			Flat
+	  {{/ KM.Button}}
+	  
+	  {{> KM.Button args mdi='add' type='flat'}}
+	  
+	  {{> KM.Button args mdi='add' type='flat' classList=classArr}}
+	  
+	  {{# KM.Button args mdi='add' type='flat'}}
+			Flat
+	  {{/ KM.Button}}
+	</div>
+	
+	<div class="column">
+		{{> KM.Button args mdi='add' disabled=true type='flat' classList=classArr}}
+
+	  {{# KM.Button args mdi='add' type='flat' disabled=true}}
+			Disabled Flat
+	  {{/ KM.Button}}
+	</div>
+	
+	<div class="column">
+		{{> KM.Button args mdi='add' togglable=true type='flat' classList=classArr}}
+
+	  {{# KM.Button args type='flat' togglable=true}}
+			Togglable Flat
+	  {{/ KM.Button}}
+  </div>
+  
+  <h3>Floating Action Button</h3>
+  <div class="column">
+		{{> KM.Button args mdi='add' type='fab'}}
+		
+		{{> KM.Button args mdi='add' type='fab' togglable=true}}
+
+		{{> KM.Button args mdi='add' type='fab' disabled=true}}
+	</div>
+</template>

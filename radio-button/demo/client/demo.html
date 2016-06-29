@@ -1,0 +1,23 @@
+<head>
+  <title>Radio Button</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<h1>Radio Buttons without group</h1>
+  {{> KM.RadioButton args label='Radio One'}}
+  {{> KM.RadioButton args label='Radio Two'}}
+  {{> KM.RadioButton args label='Radio Three' checked=true}}
+  {{> KM.RadioButton args label='Radio Four'}}
+  
+  <h1>Radio Buttons with group</h1>
+  {{# KM.RadioGroup args name='test'}}
+		{{> KM.RadioButton args label='Radio One'}}
+	  {{> KM.RadioButton args label='Radio Two'}}
+	  {{> KM.RadioButton args label='Radio Three' checked=true}}
+	  {{> KM.RadioButton args label='Radio Four'}}
+  {{/ KM.RadioGroup}}
+</template>

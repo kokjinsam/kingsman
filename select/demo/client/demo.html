@@ -1,0 +1,17 @@
+<head>
+  <title>demo</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{# KM.Select args label='Select Label'}}
+		{{# KM.Item}} Option 1 {{/ KM.Item}}
+		{{# KM.Item}} Option 2 {{/ KM.Item}}
+		{{# KM.Item}} Option 3 {{/ KM.Item}}
+		{{# KM.Item}} Option 4 {{/ KM.Item}}
+		{{# KM.Item}} Option 5 {{/ KM.Item}}
+	{{/ KM.Select}}
+</template>

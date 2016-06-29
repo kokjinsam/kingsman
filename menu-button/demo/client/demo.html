@@ -1,0 +1,61 @@
+<head>
+  <title>Menu Button</title>
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1">
+</head>
+
+<template name="hello">
+  {{# KM.MenuButton args closeMenuOnClickItem=false}}
+		{{# KM.Button}}
+			Menu Button
+		{{/ KM.Button}}
+		{{# KM.Menu args multi=true}}
+			{{# KM.Item}} Item 1 {{/ KM.Item}}
+			{{# KM.Item}} Item 2 {{/ KM.Item}}
+			{{# KM.Item}} Item 3 {{/ KM.Item}}
+			{{# KM.Item}} Item 4 {{/ KM.Item}}
+			{{# KM.Item}} Item 5 {{/ KM.Item}}
+			{{# KM.Item}} Item 6 {{/ KM.Item}}
+			{{# KM.Item}} Item 7 {{/ KM.Item}}
+			{{# KM.Item}} Item 8 {{/ KM.Item}}
+    {{/ KM.Menu}}
+  {{/ KM.MenuButton}}
+  
+  <h1>Current Selected Items: {{selectedTab}}</h1>
+  
+  {{# KM.MenuButton args classList=classArr closeMenuOnClickItem=false}}
+		{{# KM.Button}}
+			Menu Button
+		{{/ KM.Button}}
+		{{# KM.Menu}}
+			{{# KM.Item}} Item 1 {{/ KM.Item}}
+			{{# KM.Item}} Item 2 {{/ KM.Item}}
+			{{# KM.Item}} Item 3 {{/ KM.Item}}
+			{{# KM.Item}} Item 4 {{/ KM.Item}}
+			{{# KM.Item}} Item 5 {{/ KM.Item}}
+			{{# KM.Item}} Item 6 {{/ KM.Item}}
+    {{/ KM.Menu}}
+  {{/ KM.MenuButton}}
+  
+  <a href="/second">To second page</a>
+</template>
+
+<template name="hello2">
+	{{# KM.MenuButton args closeMenuOnClickItem=false alignBottom=true}}
+		{{# KM.Button}}
+			Menu Button
+		{{/ KM.Button}}
+		
+		{{# KM.Menu args multi=true}}
+			{{# KM.Item}} Item 1 {{/ KM.Item}}
+			{{# KM.Item}} Item 2 {{/ KM.Item}}
+			{{# KM.Item}} Item 3 {{/ KM.Item}}
+			{{# KM.Item}} Item 4 {{/ KM.Item}}
+			{{# KM.Item}} Item 5 {{/ KM.Item}}
+			{{# KM.Item}} Item 6 {{/ KM.Item}}
+    {{/ KM.Menu}}
+  {{/ KM.MenuButton}}
+</template>
+
+<template name="layout">
+	{{> Template.dynamic template=content}}
+</template>

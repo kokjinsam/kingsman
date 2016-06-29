@@ -1,0 +1,72 @@
+<head>
+  <title>Item Component</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<div class="container">
+		{{# KM.Item}}
+			{{# KM.ItemBody args twoLine=true}} 
+				<div>First Line</div>
+				<div class="km-item__body--secondary">Second line</div>
+			{{/ KM.ItemBody}}
+		{{/ KM.Item}}
+		
+		{{# KM.Item}}
+			{{# KM.ItemBody args twoLine=true}} 
+				<div>First Line</div>
+				<div class="km-item__body--secondary">Second line</div>
+			{{/ KM.ItemBody}}
+		{{/ KM.Item}}
+		
+		{{# KM.Item}}
+			{{# KM.ItemBody args twoLine=true}} 
+				<div>First Line</div>
+				<div class="km-item__body--secondary">Second line</div>
+			{{/ KM.ItemBody}}
+		{{/ KM.Item}}
+	</div>
+	
+	<div class="container">
+		{{# KM.Item}}
+			First Line
+		{{/ KM.Item}}
+		
+		{{# KM.Item}}
+			First Line
+		{{/ KM.Item}}
+		
+		{{# KM.Item}}
+			First Line
+		{{/ KM.Item}}
+	</div>
+	
+	<div class="container">
+		{{# KM.Item}}
+			<i class="material-icons">home</i>
+			First Line
+		{{/ KM.Item}}
+		{{# KM.Item}}
+			<i class="material-icons">warning</i>
+			First Line
+		{{/ KM.Item}}
+		{{# KM.Item}}
+			<i class="material-icons">account_circle</i>
+			First Line
+		{{/ KM.Item}}
+	</div>
+	
+	<div class="container">
+		<select>
+			{{# KM.Item}} Option 1 {{/ KM.Item}}
+			{{# KM.Item}} Option 2 {{/ KM.Item}}
+			{{# KM.Item}} Option 3 {{/ KM.Item}}
+			{{# KM.Item}} Option 4 {{/ KM.Item}}
+		</select>
+	</div>
+</template>

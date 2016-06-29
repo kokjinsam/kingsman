@@ -1,0 +1,4 @@
+/* Remove Focus Boxes */
+.km-select select:focus {
+  outline: 1px solid lighten($secondary-color, 47%);
+}

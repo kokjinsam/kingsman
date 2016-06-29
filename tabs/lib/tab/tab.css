@@ -1,0 +1,26 @@
+.km-tab {
+  -webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+			-ms-flex-positive: 1;
+					flex-grow: 1;
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 48px;
+	height: 48px;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	letter-spacing: .8px;
+	width: 15%;
+	min-width: 80px;
+	cursor: pointer;
+}
+
+.km-tab--disabled {
+	cursor: default;
+	background: #eaeaea;
+	color: #00bcd4;
+}

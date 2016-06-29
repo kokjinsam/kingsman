@@ -1,0 +1,9 @@
+<template name="kingsman_tabs">
+	<ul class="km-tabs {{_type}} {{_alignment}} {{_raised}} {{#if _classList}} 
+			{{#each _classList}} 
+				{{this}} 
+			{{/each}} 
+		{{/if}}">
+		{{> Template.contentBlock}}
+	</ul>
+</template>

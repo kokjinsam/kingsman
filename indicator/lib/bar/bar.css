@@ -1,0 +1,40 @@
+.km-bar {
+	display: block;
+  width: 40px;
+  margin: 0 auto;
+}
+.km-bar--loading {
+  display: inline-block;
+  width: 6px;
+  height: 25px;
+  border-radius: 6px;
+  animation: loading 1s ease-in-out infinite;
+}
+.km-bar--loading:nth-child(1) {
+  background-color: #3498db;
+  animation-delay: 0;
+}
+.km-bar--loading:nth-child(2) {
+  background-color: #c0392b;
+  animation-delay: 0.09s;
+}
+.km-bar--loading:nth-child(3) {
+  background-color: #f1c40f;
+  animation-delay: .18s;
+}
+.km-bar--loading:nth-child(4) {
+  background-color: #27ae60;
+  animation-delay: .27s;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1, 2.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,131 @@
+/*
+ * Partial code from Scotch.io (https://scotch.io/tutorials/google-material-design-input-boxes-in-css3)
+ */
+
+* { box-sizing:border-box; 
+	padding: 0;
+	margin: 0;
+}
+
+
+.km-input { 
+  position: relative; 
+  height: 72px;
+  padding: 0px 0px 8px 0px;
+}
+
+.km-textarea {
+	position: relative;
+	padding: 0px 0px 8px 0px;
+}
+
+.km-input input,
+.km-textarea textarea {
+	color: #212121;
+	font-family: 'Roboto', 'Noto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 16px 0px 8px 0px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.km-input input:focus,
+.km-textarea textarea:focus { 
+	outline: none; 
+}
+
+.km-input input:disabled,
+.km-textarea textarea:disabled {
+	border-bottom: 1px dashed #757575;
+	color: #757575;
+	background: transparent;
+}
+
+/*
+ * Label
+ */
+.km-input label,
+.km-textarea label {
+  color: #999; 
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'roboto', sans-serif;
+  text-align: 'left';
+  position: absolute;
+  pointer-events: none;
+  top: 22px;
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
+}
+
+.km-input__label--float input:focus ~ label, 
+.km-input__label--float input:valid ~ label,
+.km-input__label--float textarea:focus ~ label, 
+.km-input__label--float textarea:valid ~ label {
+	display: initial;
+  top: 0px;
+  font-size: 12px;
+}
+
+.km-input__label--hide {
+	display: none;
+}
+
+.km-input__label--float textarea:focus ~ label,
+.km-input__label--float input:focus ~ label {
+	color: #5264AE;
+}
+
+/*
+ * Bar
+ */
+ 
+.km-input__bar {
+	position: relative; 
+	display: block; 
+	width: 100%; 
+}
+
+.km-input__bar:before, 
+.km-input__bar:after {
+  content: '';
+  height: 2px; 
+  width: 0;
+  bottom: 1px; 
+  position: absolute;
+  background: #5264AE; 
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
+}
+
+.km-input__bar:before {
+  left: 50%;
+}
+
+.km-input__bar:after {
+  right: 50%; 
+}
+
+.km-input input:focus ~ .km-input__bar:before, 
+.km-input input:focus ~ .km-input__bar:after,
+.km-textarea textarea:focus ~ .km-input__bar:before, 
+.km-textarea textarea:focus ~ .km-input__bar:after {
+  width: 50%;
+}
+
+/*
+ * Character Counter
+ */
+.km-input__counter {
+	float: right;
+	font-size: 12px;
+	font-family: 'Roboto', 'Noto', sans-serif;
+	letter-spacing: 1px; 
+}

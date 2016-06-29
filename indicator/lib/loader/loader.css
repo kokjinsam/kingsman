@@ -1,0 +1,68 @@
+/* codes from http://codepen.io/brycesnyder/pen/GpRYWV */
+
+.km-loader {
+  display: block;
+  width: 90px;
+  height: 20px;
+  margin: 0 auto;
+}
+.km-loader div {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background: #000;
+  display: inline-block;
+}
+.km-loader div:first-child {
+  animation: move 0.75s ease-in-out infinite alternate;
+  background: #4285f4;
+  margin-left: 0;
+}
+.km-loader div:nth-child(2) {
+  animation: move 0.75s ease-in-out -0.25s infinite alternate;
+  margin-left: 25px;
+  background: #db4437;
+}
+.km-loader div:nth-child(3) {
+  animation: move 0.75s ease-in-out -0.5s infinite alternate;
+  margin-left: 50px;
+  background: #f4b400;
+}
+.km-loader div:nth-child(4) {
+  animation: move 0.75s ease-in-out -0.75s infinite alternate;
+  margin-left: 75px;
+  background: #0f9d58;
+}
+@-moz-keyframes move {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@-o-keyframes move {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}

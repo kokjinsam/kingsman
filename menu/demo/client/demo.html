@@ -1,0 +1,67 @@
+<head>
+  <title>demo</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+	<div class="container">
+		{{# KM.Menu}}
+		  {{# KM.Item}} Item 1 {{/ KM.Item}}
+		  {{# KM.Item}} Item 2 {{/ KM.Item}}
+		  {{# KM.Item}} Item 3 {{/ KM.Item}}
+		{{/ KM.Menu}}
+  </div>
+  
+  <h1>Selected item: {{selectedItem}}</h1>
+  <a href="#" id="changeItem">change item</a>
+  
+  <div class="container">
+		{{# KM.Menu}}
+		  {{# KM.Item}} Item 4 {{/ KM.Item}}
+		  {{# KM.Item}} Item 5 {{/ KM.Item}}
+		  {{# KM.Item}} Item 6 {{/ KM.Item}}
+		{{/ KM.Menu}}
+  </div>
+  
+  <div class="container">
+		{{# KM.Menu}}
+		  {{# KM.Item}} Item 1 {{/ KM.Item}}
+			{{# KM.Item}} Item 2 {{/ KM.Item}}
+			{{# KM.Item}} Item 3 {{/ KM.Item}}
+			{{# KM.Item}}
+				{{# KM.ItemBody args twoLine=true}}
+					<div>First Line</div>
+					<div class="km-item__body--secondary">Second line</div>
+				{{/ KM.ItemBody}}
+			{{/ KM.Item}}
+			{{# KM.Item}}
+				{{> test}}
+			{{/ KM.Item}}
+		{{/ KM.Menu}}
+  </div>
+  
+  <h1>Selected item: {{selectedItem1}}</h1>
+  <a href="#" id="changeItem1">change item</a>
+  
+	<div class="container">
+  {{# KM.Item}} Item 1 {{/ KM.Item}}
+  {{# KM.Item}} Item 2 {{/ KM.Item}}
+  {{# KM.Item}} Item 3 {{/ KM.Item}}
+  {{# KM.Item}}
+		{{# KM.ItemBody args twoLine=true}}
+			<div>First Line</div>
+			<div class="km-item__body--secondary">Second line</div>
+		{{/ KM.ItemBody}}
+  {{/ KM.Item}}
+  {{# KM.Item}}
+		{{> test}}
+  {{/ KM.Item}}
+  </div>
+</template>
+
+<template name="test">
+	Ohhhhh
+</template>

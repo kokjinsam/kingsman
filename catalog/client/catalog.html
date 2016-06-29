@@ -1,0 +1,25 @@
+<head>
+  <title>catalog</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{# KM.Drawer args configs}}
+		Drawer content here
+  {{/ KM.Drawer}}
+  
+  <div class="km-content">
+		{{# KM.Tabs}}
+			{{# KM.Tab}} Tab 1 {{/KM.Tab}}
+			{{# KM.Tab}} Tab 2 {{/KM.Tab}}
+			{{# KM.Tab}} Tab 3 {{/KM.Tab}}
+		{{/ KM.Tabs}}
+		
+		{{# KM.Button}}
+			Button Title
+		{{/ KM.Button}}
+	</div>
+</template>

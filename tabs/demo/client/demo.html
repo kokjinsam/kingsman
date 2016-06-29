@@ -1,0 +1,40 @@
+<head>
+	<title>Tabs Component</title>
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#KM.Tabs args type='fixed' test='2'}}
+		{{#KM.Tab}} Tab 0 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 1 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 2 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 3 {{/KM.Tab}}
+  {{/KM.Tabs}}
+  
+  <h1>Selected tab: {{selectedTab}}</h1>
+
+	<a href="#" id="changeTab">Change Tab</a>
+  
+  {{#KM.Tabs args type='fixed' test='2'}}
+		{{#KM.Tab}} Tab 1 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 2 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 3 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 4 {{/KM.Tab}}
+  {{/KM.Tabs}}
+<!--  
+  <div class="container">
+  {{#KM.Tabs args type='fixed' test='2'}}
+		{{#KM.Tab}} Tab 1 {{/KM.Tab}}
+		{{#KM.Tab args disabled=true}} Disabled {{/KM.Tab}}
+		{{#KM.Tab}} Tab 3 {{/KM.Tab}}
+		{{#KM.Tab}} Tab 4 {{/KM.Tab}}
+  {{/KM.Tabs}}
+  </div>
+-->
+</template>
